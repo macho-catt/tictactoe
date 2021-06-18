@@ -1,6 +1,6 @@
 import Square from './Square.js'
 
-const Board = ({squares, onClick, isClicked}) => {
+const Board = ({squares, onClick, boardState, markSpace, isSquareClicked}) => {
   return(
     <div className="board">
     {squares.map(square => 
@@ -8,7 +8,9 @@ const Board = ({squares, onClick, isClicked}) => {
         id={square} 
         onClick={onClick} 
         key={square} 
-        isClicked={isClicked}
+        boardState={boardState}
+        isSquareClicked={isSquareClicked}
+        markSpace={markSpace}
       />)
     }
     </div>

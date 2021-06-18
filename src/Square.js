@@ -1,13 +1,9 @@
-import React, {useRef } from 'react'
 
-const Square = ({id, onClick, isClicked}) => {
-
-  const markRef = useRef();
-  markRef.current = id === isClicked ? 'X' : '';
+const Square = ({id, onClick, boardState, isSquareClicked}) => {
 
   return(
-    <div className="square" id={id} onClick={onClick} isClicked={isClicked}>
-      {/*{markRef}*/}
+    <div className="square" id={id} onClick={onClick} isClicked={boardState}>
+      {isSquareClicked[id - 1] && boardState[id - 1]}
     </div>
   )
 }

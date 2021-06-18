@@ -2,6 +2,13 @@ body{
   background-color: #81dafc;
 }
 
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .board{
     margin-top: 100px;
     display: grid;
@@ -21,4 +28,12 @@ body{
   width: 100px;
   text-align: center;
   line-height: 100px;
+}
+
+.winner{
+  margin-bottom: -80px;
+}
+
+.Reset{
+  margin-top: 10px;
 }
